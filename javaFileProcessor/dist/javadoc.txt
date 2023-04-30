@@ -1,0 +1,33 @@
+Class Name: Motor
+	/**
+	* Varsayılan kurucu fonksiyon
+	*/
+Function Name: Motor
+number  of  javadoc  comment: 1
+----------------------------------------------------
+	/**
+	*
+	* @param motorNo UUID olarak motor id
+	* @return motor instance
+	*/
+Function Name: Motor
+number  of  javadoc  comment: 1
+----------------------------------------------------
+Function Name: void calistir
+	/**
+	* calisiyor true yapılıyor
+	*/
+number  of  javadoc  comment: 1
+----------------------------------------------------
+	/**
+	* Motorun durdurulması //
+	*/
+Function Name: void durdur
+number  of  javadoc  comment: 1
+----------------------------------------------------
+Function Name: String getMotorNo
+number  of  javadoc  comment: 0
+----------------------------------------------------
+Function Name: String toString
+number  of  javadoc  comment: 0
+----------------------------------------------------

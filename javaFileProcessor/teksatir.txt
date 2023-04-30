@@ -1,0 +1,22 @@
+Class Name: Motor
+Function Name: Motor
+numberof single line comment: 0
+----------------------------------------------------
+Function Name: Motor
+// false yapılıyor
+numberof single line comment: 1
+----------------------------------------------------
+Function Name: void calistir
+numberof single line comment: 0
+----------------------------------------------------
+Function Name: void durdur
+numberof single line comment: 0
+----------------------------------------------------
+Function Name: String getMotorNo
+// motor no getir
+numberof single line comment: 1
+----------------------------------------------------
+Function Name: String toString
+// durum belirlenmesi //
+numberof single line comment: 1
+----------------------------------------------------
