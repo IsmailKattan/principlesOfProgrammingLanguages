@@ -4,15 +4,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef enum Rool{false,true}boolean;
 //our struct
 struct FLAG
 {
     char flg;
-
+    //get function for flg value
+    char (*getFlg)(struct FLAG*);
+    //disconstructor
+    void (*delete)(struct FLAG*);
 };
 
-typedef struct FLAG Flag;
+typedef struct FLAG* Flag;
 
 //constructor
 Flag new_Flag(char);
