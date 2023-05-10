@@ -1,97 +1,122 @@
-#include <flag.h>
-#include <tactic/tacticA.h>
-#include <tactic/tacticB.h>
-#include <tactic/tacticC.h>
+#include "play.h"
 
-
-int main() {
-
-
-
-  return 0;
+int main()
+{   
+    DynamicArray array;
+    createColonies(&array);
+    printArray(&array);
+    
+    return 0;
 }
+    // Flag flag = new_Flag('@');
+    // printf("Flag : %c\n",flag->getCH(flag));
+    // flag->setCH(flag,'$');
+    // printf("New flag : %c\n",flag->getCH(flag));
+    // flag->delete(flag);
+    // printf("------------------------------------------------01------------------------------------------------\n");
+    // Production pro1 = new_Producion(105);
+    // printf("food stock in production %d\n",pro1->getStock(pro1));
+    // pro1->setStock(pro1,pro1->getStock(pro1)+pro1->produce(pro1));
+    // printf("new food stock in Production %d\n",pro1->getStock(pro1));
+    // pro1->delete(pro1);
+    // printf("------------------------------------------------02------------------------------------------------\n");
+    // ProductionA pro2 = new_ProducionA(105);
+    // printf("food stock in productionA %d\n",pro2->getStock(pro2));
+    // pro2->setStock(pro2,pro2->getStock(pro2)+pro2->produce(pro2));
+    // printf("new food stock in ProductionA %d\n",pro2->getStock(pro2));
+    // pro2->delete(pro2);
+    // printf("------------------------------------------------03------------------------------------------------\n");
+    // ProductionB pro3 = new_ProducionB(105);
+    // printf("food stock in productionB %d\n",pro3->getStock(pro3));
+    // pro3->setStock(pro3,pro3->getStock(pro3)+pro3->produce(pro3));
+    // printf("new food stock in ProductionB %d\n",pro3->getStock(pro3));
+    // pro3->delete(pro3);
+    // printf("------------------------------------------------04------------------------------------------------\n");
+    // ProductionC pro4 = new_ProducionC(105);
+    // printf("food stock in productionC %d\n",pro4->getStock(pro4));
+    // pro4->setStock(pro4,pro4->getStock(pro4)+pro4->produce(pro4));
+    // printf("new food stock in ProductionC %d\n",pro4->getStock(pro4));
+    // pro4->delete(pro4);
+    // printf("------------------------------------------------05------------------------------------------------\n");
+    // Productions pro5 = new_productions(100);
+    // printf("the ID is %d\n",pro5->ID);
+    // printf("food stock in productions %d\n",pro5->getStock(pro5));
+    // pro5->setStock(pro5,pro5->getStock(pro5)+pro5->produce(pro5));
+    // printf("new food stock in productions %d\n",pro5->getStock(pro5));
+    // pro5->delete(pro5);
+    // printf("------------------------------------------------06------------------------------------------------\n");
+    // Productions pro6 = new_productions(101);
+    // printf("the ID is %d\n",pro5->ID);
+    // printf("food stock in productions %d\n",pro6->getStock(pro6));
+    // pro6->setStock(pro6,pro6->getStock(pro6)+pro6->produce(pro6));
+    // printf("new food stock in productions %d\n",pro6->getStock(pro6));
+    // pro6->delete(pro6);
+    // printf("------------------------------------------------07------------------------------------------------\n");
+    // Productions pro7 = new_productions(102);
+    // printf("the ID is %d\n",pro5->ID);
+    // printf("food stock in productions %d\n",pro7->getStock(pro7));
+    // pro7->setStock(pro7,pro7->getStock(pro7)+pro7->produce(pro7));
+    // printf("new food stock in productions %d\n",pro7->getStock(pro7));
+    // pro7->delete(pro7);
+    // printf("------------------------------------------------08------------------------------------------------\n");
+    // TacticA T1 = new_TacticA(123,"A taktiği");
+    // printf("ID   :%d\n",T1->getID(T1));
+    // printf("Name :%s\n",T1->getName(T1));
+    // printf("savaş!!! : %d\n", T1->war(T1));
+    // T1->delete(T1);
+    // printf("------------------------------------------------09------------------------------------------------\n");
+    // TacticB T2 = new_TacticB(123,"B taktiği");
+    // printf("ID   :%d\n",T2->getID(T2));
+    // printf("Name :%s\n",T2->getName(T2));
+    // printf("savaş!!! : %d\n", T2->war(T2));
+    // T2->delete(T2);
+    // printf("------------------------------------------------10-----------------------------------------------\n");
+    // TacticC T3 = new_TacticC(123,"C taktiği");
+    // printf("ID   :%d\n",T3->getID(T3));
+    // printf("Name :%s\n",T3->getName(T3));
+    // printf("savaş!!! : %d\n", T3->war(T3));
+    // T3->delete(T3);
+    // printf("------------------------------------------------11-----------------------------------------------\n");
+    // Tactics T4 = new_Tactics(100,"A taktiği");
+    // printf("ID   :%d\n",T4->getID(T4));
+    // printf("Name :%s\n",T4->getName(T4));
+    // printf("savaş!!! : %d\n", T4->war(T4));
+    // T4->delete(T4);
+    // printf("------------------------------------------------12-----------------------------------------------\n");
+    // Tactics T5 = new_Tactics(101,"B taktiği");
+    // printf("ID   :%d\n",T5->getID(T5));
+    // printf("Name :%s\n",T5->getName(T5));
+    // printf("savaş!!! : %d\n", T5->war(T5));
+    // T5->delete(T5);
+    // printf("------------------------------------------------13-----------------------------------------------\n");
+    // Tactics T6 = new_Tactics(102,"C taktiği");
+    // printf("ID   :%d\n",T6->getID(T6));
+    // printf("Name :%s\n",T6->getName(T6));
+    // printf("savaş!!! : %d\n", T6->war(T6));
+    // T6->delete(T6);
+    // printf("------------------------------------------------14-----------------------------------------------\n");
 
 
 
-/*
--------------------------------------------------------------------------------------------------------------------
-*/
-/*
-test for tacticC
-  TacticC T3 = new_TacticC(213,"C taktiği");
-  printf("%d\n",T3->getTactic(T3));
-  printf("%d\n ",T3->getTactic(T3)->getID(T3->getTactic(T3)));
-  printf("%s\n",T3->getTactic(T3)->getName(T3->getTactic(T3)));
-  printf("savaş!!! : %d\n", T3->war(T3));
-  T3->delete(T3);
-*/
-
-/*
-test for tacticB
-  TacticB T2 = new_TacticB(321,"B taktiği");
-  printf("%d\n",T2->getTactic(T2));
-  printf("%d\n ",T2->getTactic(T2)->getID(T2->getTactic(T2)));
-  printf("%s\n",T2->getTactic(T2)->getName(T2->getTactic(T2)));
-  printf("savaş!!! : %d\n", T2->war(T2));
-  T2->delete(T2);
-*/
-
-/*
-test for tacticA
-  TacticA T1 = new_TacticA(123,"A taktiği");
-  printf("%d\n",T1->getTactic(T1));
-  printf("%d\n ",T1->getTactic(T1)->getID(T1->getTactic(T1)));
-  printf("%s\n",T1->getTactic(T1)->getName(T1->getTactic(T1)));
-  printf("savaş!!! : %d\n", T1->war(T1));
-  T1->delete(T1);
-*/
-
-/*
-----------------------------------------------------------------------------------------------------------------------
-*/
-/*
-
-  test for tactic
-  Tactic T1 = new_Tactic(1,"ismailin taktiği");
-  Tactic T2 = new_Tactic(2,"ibrahimin taktiği");
-  Tactic T3 = new_Tactic(3,"kadirin taktiği");
-  Tactic T4 = new_Tactic(4,"muhammedin taktiği");
-  Tactic tactic[4] = {T1,T2,T3,T4};
-  printf("%d\n",tactic);
-  printf("%d\n",sizeof(tactic));
-
-  for(size_t i = 0 ; i < sizeof(tactic) / sizeof(Tactic);i++)
-  {
-    printf("%d\n",tactic[i]->getID(tactic[i]));
-    printf("%s\n",tactic[i]->getName(tactic[i]));
-    printf("savaş!!! : %d\n", tactic[i]->War(tactic[i]));
-  }
-
-  for(size_t i = 0 ; i < sizeof(tactic) / sizeof(Tactic);i++)
-  {
-    tactic[i]->delete(tactic[i]);
-  }
-*/
-
-/*
----------------------------------------------------------------------------------------------------------------------
-*/
-/*
-
-  test for Flag;
-  Flag f = new_Flag('f');
-  Flag l = new_Flag('l');
-  Flag a = new_Flag('a');
-  Flag g = new_Flag('g');
-  Flag flag[4] = {f, l, a, g};
-  printf("%d\n", flag);
-
-  for (size_t i = 0; i < sizeof(flag) / sizeof(Flag); i++)
-  {
-    printf("%c\n", flag[i]->getFlg(flag[i]));
-  }
-
-  for (size_t i = 0; i < sizeof(flag) / sizeof(Flag); i++)
-  {
-    flag[i]->delete(flag[i]);
-  }*/
+    // Flag flag = new_Flag('%');
+    // Tactics tactic = new_Tactics(100,"B taktiği");
+    // Productions production = new_productions(10000);
+    // Colony c = new_Colony(100,flag,tactic,production);
+    // printf("testing colony methods\n");
+    // printf("current population : %d\t",c->getPopulation(c));
+    // c->setPopulation(c,150);
+    // printf("new population     : %d\n",c->getPopulation(c));
+    // printf("current Wins       : %d\t",c->getWins(c));
+    // c->setWins(c,5);
+    // printf("new population     : %d\n",c->getWins(c));
+    // printf("current Defeats    : %d\t",c->getDefeats(c));
+    // c->setDefeats(c,3);
+    // printf("new Defeats        : %d\n",c->getDefeats(c));
+    // printf("current flag       : %c\t",c->getflag(c));
+    // c->setflag(c,'#');
+    // printf("new flag           : %c\n",c->getflag(c));
+    // printf("WAR!!!             : %d\n",c->war(c));
+    // printf("current food stock : %d\t",c->getStock(c));
+    // c->setStock(c,c->getStock(c)+c->produce(c));
+    // printf("new food stock     : %d\n",c->getStock(c));
+    // c->delete(c);

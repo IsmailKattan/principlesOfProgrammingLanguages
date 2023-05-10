@@ -27,5 +27,7 @@ char* getName(const Tactic this)
 void delete_Tactic(const Tactic this)
 {
     if(this!=NULL)
+    {
         free(this);
+    }
 }

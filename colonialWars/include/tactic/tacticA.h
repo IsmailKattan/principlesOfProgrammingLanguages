@@ -11,9 +11,9 @@ struct TACTICA
     /*methods*/ 
     Tactic (*getTactic)(struct TACTICA*); // get base address (function pointer)
     int (*war)(struct TACTICA*); // war function for A tactic
-    /***********overloading from base***********/
-    int (*getID)(struct TACTIC*);
-    char* (*getName)(struct TACTIC*);
+    /***********overriding from base***********/
+    int (*getID)(struct TACTICA*);
+    char* (*getName)(struct TACTICA*);
     /*******************************************/
     void (*delete)(struct TACTICA*);  // destructor (function pointer)
 };
@@ -21,15 +21,15 @@ struct TACTICA
 typedef struct TACTICA* TacticA;
 
 // conctructor
-TacticA new_TacticA(int,char*);
+TacticA new_TacticA(int);
 // get base tactic;
 Tactic getTacticA(const TacticA);
 // war function for A tactic
 int warA(const TacticA);
-// (@overloading) get function for ID;
-int getIDA(const Tactic);
-// (@overloading) get function for name 
-char* getNameA(const Tactic);
+// (@overriding) get function for ID
+int getIDA(const TacticA);
+// (@overriding) get function for name 
+char* getNameA(const TacticA);
 // destructor 
 void delete_TacticA(const TacticA);
 

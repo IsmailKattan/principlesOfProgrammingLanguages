@@ -1,11 +1,11 @@
 #include <tacticB.h>
 
 // conctructor
-TacticB new_TacticB(int ID, char* name) 
+TacticB new_TacticB(int ID) 
 {
     TacticB this = (TacticB)malloc(sizeof(struct TACTICB)); // allocate memory for new object (TACTICB)
-    this->inherited = new_Tactic(ID,name); // create object from base struct
-    /*pointer of overloading function*/
+    this->inherited = new_Tactic(ID,"B taktiği"); // create object from base struct
+    /*pointer of overriding function*/
     this->getID = &getIDB;
     this->getName = &getNameB;
     /*other methods*/
@@ -23,25 +23,25 @@ Tactic getTacticB(const TacticB this)
 // war function for B tactic
 int warB(const TacticB this)
 {
-    int ID = (this->getID(this->getTactic(this)));
+    int ID = this->getID(this);
     srand(time(NULL) + (15*ID*ID));
     return rand() % 1000; // producing a number between 0 and 1000
 }
-// (@overloading) get function for ID;
-int getIDB(const Tactic this)
+// (@overriding) get function for ID;
+int getIDB(const TacticB this)
 {
-    return this->getID(this);
+    return this->inherited->getID(this->inherited);
 }
-// (@overloading) get function for name 
-char* getNameB(const Tactic this)
+// (@overriding) get function for name 
+char* getNameB(const TacticB this)
 {
-    return this->getName(this);
+    return this->inherited->getName(this->inherited);
 }
 // destructor 
 void delete_TacticB(const TacticB this)
 {
     if (this != NULL) {
-        delete_Tactic(this->inherited);
+        this->inherited->delete(this->inherited);
         free(this);
     }
 }

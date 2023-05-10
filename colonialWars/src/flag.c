@@ -5,7 +5,8 @@ Flag new_Flag(char chr)
 {
     Flag this = (Flag) malloc(sizeof(struct FLAG));
     this->flg = chr;
-    this->getFlg = &getFlg;
+    this->getCH = &getFlg;
+    this->setCH = &setFlg;
     this->delete = &delete_Flag;
     return this;
 }
@@ -13,6 +14,11 @@ Flag new_Flag(char chr)
 char getFlg(const Flag this) // this is a pointer 
 {
     return this->flg;
+}
+//set function for flg value
+void setFlg(const Flag this, char flg)
+{
+    this->flg = flg;
 }
 //disconstructor
 void delete_Flag(const Flag this) // this is a pointer

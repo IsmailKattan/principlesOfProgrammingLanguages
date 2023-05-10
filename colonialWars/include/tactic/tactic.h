@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef enum Rool{true,false}boolean;
-
 struct TACTIC
 {
     /*properties*/
