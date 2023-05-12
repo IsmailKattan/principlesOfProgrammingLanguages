@@ -2,9 +2,41 @@
 
 int main()
 {   
+    system("cls");
     DynamicArray array;
     createColonies(&array);
+    system("cls");
+    printf("coloniler hakkinda:\n");
+    printinfo(&array);
+    system("pause");
+    system("cls");
     printArray(&array);
+    system("pause");
+    int tour = 0;
+    while (1)
+    {
+        tour++;
+        system("cls");
+        colonialWar(&array);
+        int counter = 0;
+        for (size_t i = 0; i < array.size; i++)
+        {
+            if(get(&array,i)->isViable(get(&array,i)))
+                counter++;
+        }
+        if(counter<=1)
+        {
+            printf("oyun bitmistir artik program sonlandirilacak\n");
+            system("pause");
+            printf("tur:\t%d\n",tour);
+            printArray(&array);
+            break;
+        }
+        printf("tur:\t%d\n",tour);
+        printArray(&array);
+        system("pause");
+    }
+    freeArray(&array);
     
     return 0;
 }

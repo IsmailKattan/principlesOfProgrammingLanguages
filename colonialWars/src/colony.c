@@ -30,6 +30,7 @@ Colony new_Colony(int population,Flag flag,Tactics tactic,Productions production
     this->setStock = &setStock_forColony;
     this->produce = &produce_forColony;
     this->war = &war_forColony;
+    this->isViable = &isViable;
     return this;
 }
 /****************get functions****************/
@@ -131,4 +132,13 @@ int produce_forColony(const Colony this)
 int war_forColony(const Colony this)
 {
     return this->tactic->war(this->tactic);
+}
+/****************other functions****************/
+// Returns 1 if the colony is still viable and 0 if the colony loses
+int isViable(const Colony this)
+{
+    if(this->getPopulation(this)<=0||this->getStock(this)<=0)
+        return 0;
+    else 
+        return 1;
 }

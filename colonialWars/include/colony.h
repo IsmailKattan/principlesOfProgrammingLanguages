@@ -33,7 +33,8 @@ struct COLONY
     void (*setStock)(struct COLONY*, int);
     int (*produce)(struct COLONY*);
     int (*war)(struct COLONY*);
-
+    /*other methods*/
+    int (*isViable)(struct COLONY*);
     // destructor
     void (*delete)(struct COLONY*);
 };
@@ -64,6 +65,9 @@ void setDefeats(const Colony,int);
 void setProduction(const Colony,Productions);
 // sets the tactic of colony 
 void setTactic(const Colony,Tactics);
+/****************other functions****************/
+// Returns 1 if the colony is still viable and 0 if the colony loses
+int isViable(const Colony);
 // destructor
 void delete_Colony(const Colony);
 /*overriding methods*/

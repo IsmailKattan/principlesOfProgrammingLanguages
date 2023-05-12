@@ -11,5 +11,14 @@ void createColonies();
 int retrand(int,int);
 // picks char to be flag for colony
 char pickFlag(int);
-
+// war breaks out between two colonies
+void fighting(Colony,Colony);
+// set changes after the fighting
+void setFightingResults(Colony,Colony,float);
+// colonial war 
+void colonialWar(DynamicArray*);
+// set changes after the war
+void setPeaceResult(DynamicArray*);
+// prints informations about colonies 
+void printinfo(DynamicArray*);
 #endif
