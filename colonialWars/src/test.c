@@ -1,8 +1,7 @@
 #include "play.h"
 
 int main()
-{   
-    system("cls");
+{   system("cls");
     DynamicArray array;
     createColonies(&array);
     system("cls");

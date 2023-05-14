@@ -1,17 +1,42 @@
 #include "play.h"
 
-void getIntArray(int **arr, int *size)
+void getIntArray(int **array, int *capacity)
 {
-    printf("savasacak coloni sayisi giriniz\n");
-    scanf("%d", size);
+    int num;
+    char input[1000];
+    printf("savasacak kolonilerin poplasyonlari giriniz\n");
+    printf("ornek giris bicimi \"10 20 145 165 8 472 1365 7 36\" :\t");
+    fgets(input, 1000, stdin);
+    *capacity = 0; 
+    *array = NULL; 
+    char* token = strtok(input, " ");
+    while (token != NULL) 
+    {
+        // convert the token to an integer
+        num = atoi(token);
 
-    *arr = malloc((*size) * sizeof(int));
-    printf("%d sayi giriniz:\n", *size);
+        // increase the array capacity by 1
+        *capacity += 1;
+        *array = realloc(*array, *capacity * sizeof(int));
 
-    for (int i = 0; i < *size; i++) {
-        scanf("%d", &((*arr)[i]));
+        // check if memory reallocation was successful
+        if (*array == NULL) {
+            printf("Alan belirleme hatasi ./src/play.c>getIntArray\n");
+            free(*array);
+            return;
+        }
+
+        // store the integer in the array
+        (*array)[*capacity - 1] = num;
+
+        // get the next token
+        token = strtok(NULL, " ");
     }
 }
+
+
+
+
 
 void createColonies(DynamicArray* array)
 {

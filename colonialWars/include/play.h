@@ -2,6 +2,7 @@
 #define PLAY_H
 
 #include "dynamicArray.h"
+#include <string.h>
 
 // user puts array of int (array ,size)
 void getIntArray(int**, int*);
