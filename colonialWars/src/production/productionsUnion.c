@@ -4,6 +4,7 @@
 Productions new_productions(int stock)
 {
     Productions this = (Productions)malloc(sizeof(struct PRODUCTIONS));
+    
     this->ID = stock % 3;
     switch (this->ID)
     {

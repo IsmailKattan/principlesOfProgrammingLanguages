@@ -4,6 +4,8 @@
 Tactics new_Tactics(int ID)
 {
     Tactics this = (Tactics)malloc(sizeof(struct TACTICS));
+    if(ID<0)
+        ID = ID*(-1);
     this->ID = ID % 3;
     switch (this->ID)
     {

@@ -1,10 +1,8 @@
 #include "play.h"
-
 int main()
 {   system("cls");
     DynamicArray array;
     createColonies(&array);
-    system("cls");
     printf("coloniler hakkinda:\n");
     printinfo(&array);
     system("pause");
@@ -27,6 +25,7 @@ int main()
         {
             printf("oyun bitmistir artik program sonlandirilacak\n");
             system("pause");
+            system("cls");
             printf("tur:\t%d\n",tour);
             printArray(&array);
             break;
@@ -34,9 +33,14 @@ int main()
         printf("tur:\t%d\n",tour);
         printArray(&array);
         system("pause");
+
     }
     freeArray(&array);
-    
+    system("pause");
+    system("cls");
+    printf("Anahtar :\n Aleppo\n Gaziantep\n AI\n Machine Learning ");
+    system("pause");
+    system("cls");
     return 0;
 }
     // Flag flag = new_Flag('@');

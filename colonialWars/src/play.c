@@ -43,6 +43,12 @@ void createColonies(DynamicArray* array)
     int *arr;
     int size;
     getIntArray(&arr,&size);
+    system("cls");
+    for (size_t i = 0; i < size; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    printf("\n");
     initialize(array,size);
     for(size_t i = 0; i < size; i++)
     {
